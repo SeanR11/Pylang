@@ -153,8 +153,8 @@ class ContinueLearnFrame(SubFrame):
                         current_word_index = self.data.word_list.index[self.data.word_list[self.selected_lang] == random_word].tolist()[0]
                         self.words['native'] = self.data.word_list[self.data.native_lang][current_word_index]
                         self.words['learned'] = self.data.word_list[self.selected_lang][current_word_index]
-                        self.cards[0].itemconfigure('word', text=f'{self.words['learned']}')
-                        self.cards[1].itemconfigure('word', text=f'{self.words['native']}')
+                        self.cards[0].itemconfigure('word', text=f'{self.words["learned"]}')
+                        self.cards[1].itemconfigure('word', text=f'{self.words["native"]}')
                         break
                 except IndexError as e:
                     self.cards[0].itemconfigure(tagOrId='headline',text='Congratulations')
